@@ -25,24 +25,6 @@ const App = () => {
   const { estaCargando, dispatch, productos, searchKey, error } = context
 
 
-
-  /* async function fetchCategory() {
-    const res = await fetch(
-      `https://fakestoreapi.com/products/category/${selected}`
-    );
-    const datos = await res.json();
-    console.log({ datos });
-    setCategory(datos);
-  } */
-  /* useEffect(() => {
-    let isMounted = true
-    if (isMounted) {
-      initialFetch()
-    }
-    return (() => {
-      isMounted = false
-    })
-  }, []); */
   useEffect(() => {
     let isMounted = true
     if (productos.length === 0 && isMounted) {
@@ -80,25 +62,7 @@ const App = () => {
     }
   }
   console.log(filterData(searchKey, productos))
-  /*  useEffect(() => {
-    fetchCategory();
-    // fetch(`https://fakestoreapi.com/products/category/${selected}`)
-    //   .then((res) => res.json())
-    //   .then((datos) => {
-    //     console.log("Category", { datos });
-    //     setCategory(datos);
-    //   });
-  }, [fetchCategory]); */
 
-  /*   function addCart(datos) {
-      cart.push([...cart, datos]);
-      console.log(cart);
-    }
-    function filterProductsByCategory(category) {
-      productos.filter((producto) => {
-        return producto.category === category;
-      });
-    } */
   return (
 
     <>
